@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story - Coffee Aroma</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+   
+    .story-hero {
+      background: url('images/coffee-hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 120px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .story-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      background: linear-gradient(to bottom, transparent, white);
+    }
+
+    .story-content {
+      padding: 80px 0;
+      background-color: #FFFDD0;
+    }
+
+    .story-section {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      margin-bottom: 100px;
+      padding: 40px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .story-section:hover {
+      transform: translateY(-5px);
+    }
+
+    .story-section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .story-image {
+      flex: 1;
+      position: relative;
+    }
+
+    .story-image img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .story-image::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: -20px;
+      bottom: -20px;
+      border: 2px solid var(--accent-color, #5D4037);
+      border-radius: 10px;
+      z-index: -1;
+    }
+
+    .story-text {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .story-text h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--accent-color, #5D4037);
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    .story-text h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background-color: var(--accent-color, #5D4037);
+    }
+
+    .story-text p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #666;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 40px 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      background-color: var(--accent-color, #5D4037);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 60px;
+      width: 50%;
+      padding: 0 40px;
+    }
+
+    .timeline-item:nth-child(odd) {
+      left: 0;
+    }
+
+    .timeline-item:nth-child(even) {
+      left: 50%;
+    }
+
+    .timeline-content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .timeline-year {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--accent-color, #5D4037);
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .story-section {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .story-section:nth-child(even) {
+        flex-direction: column;
+      }
+
+      .story-image img {
+        height: 300px;
+      }
+
+      .timeline::before {
+        left: 30px;
+      }
+
+      .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="container">
+      <p class="tagline">☕ TASTE OUR RICH COFFEE EXPERIENCE IN EVERY SIP</p>
+      <div class="color-selector">
+        <span>Choose accent:</span>
+        <div class="color-dot active" data-color="#5D4037"></div>
+        <div class="color-dot" data-color="#8D6E63"></div>
+        <div class="color-dot" data-color="#A1887F"></div>
+        <div class="color-dot" data-color="#D7CCC8"></div>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>Coffee<span>aroma</span></h1>
+      </div>
+      <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="story.html" class="active">Story</a></li>
+            <li><a href="mission.html">Mission</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="owner.html" >Owner</a></li>
+        </ul>
+      </nav>
+      <a href="order.html" class="btn primary">Cart</a>
+      <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <section class="story-hero">
+    <div class="container">
+      <h2 class="section-title fade-in">Our Journey</h2>
+      <p class="subtitle fade-in delay-1">A tale of passion, dedication, and exceptional coffee</p>
+    </div>
+  </section>
+
+  <section class="story-content">
+    <div class="container">
+      <div class="story-section fade-in">
+        <div class="story-image">
+          <img src="images/coffee-shop-origin.jpg" alt="Our first coffee shop location">
+        </div>
+        <div class="story-text">
+          <h3>The Beginning</h3>
+          <p>Founded in 2010, Coffee Aroma began as a small passion project between two coffee enthusiasts who shared a dream of creating a space where people could experience exceptional coffee in a warm, welcoming environment. What started as a tiny corner shop has grown into a beloved community hub.</p>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item fade-in">
+          <div class="timeline-content">
+            <div class="timeline-year">2010</div>
+            <p>Opened our first location in Brooklyn</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-content">
+            <div class="timeline-year">2013</div>
+            <p>Launched our barista training program</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-content">
+            <div class="timeline-year">2015</div>
+            <p>Started sourcing beans directly from farmers</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-content">
+            <div class="timeline-year">2018</div>
+            <p>Expanded to three locations</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="story-section fade-in">
+        <div class="story-text">
+          <h3>Our Philosophy</h3>
+          <p>At Coffee Aroma, we believe that every cup of coffee tells a story. From the carefully selected beans sourced from sustainable farms to our expert baristas who craft each drink with precision and care, we're committed to delivering an unforgettable coffee experience. Our dedication to quality and sustainability drives everything we do.</p>
+        </div>
+        <div class="story-image">
+          <img src="images/coffee-beans.jpg" alt="Our premium coffee beans">
+        </div>
+      </div>
+
+      <div class="story-section fade-in">
+        <div class="story-image">
+          <img src="images/barista-training.jpg" alt="Our barista training program">
+        </div>
+        <div class="story-text">
+          <h3>Our Team</h3>
+          <p>Our team of passionate baristas undergoes rigorous training to master the art of coffee making. We take pride in our staff's expertise and their ability to create the perfect cup of coffee while providing exceptional customer service. Each team member brings their unique personality and skills to create a welcoming atmosphere for our guests.</p>
+        </div>
+      </div>
+
+      <div class="story-section fade-in">
+        <div class="story-text">
+          <h3>Community Impact</h3>
+          <p>Beyond serving great coffee, we're committed to making a positive impact in our community. Through partnerships with local suppliers and various community initiatives, we strive to create a sustainable and inclusive coffee culture. We regularly host events, workshops, and support local artists and musicians.</p>
+        </div>
+        <div class="story-image">
+          <img src="images/community.jpg" alt="Our community involvement">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#" class="social-icon twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+            </a>
+            <a href="#" class="social-icon instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="social-icon pinterest">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.2l3-2.8a4.6 4.6 0 0 0 6-2.9"></path></svg>
+            </a>
+          </div>
+          <p>Brooklyn, New York</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Daily Menu</h3>
+          <ul>
+            <li><a href="#">Our Coffees</a></li>
+            <li><a href="#">Pastries & Snacks</a></li>
+            <li><a href="#">Seasonal Specialties</a></li>
+            <li><a href="#">Gift Cards</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Business Hours</h3>
+          <p><strong>Mon-Fri:</strong> 6:00 AM - 8:00 PM</p>
+          <p><strong>Saturday:</strong> 7:00 AM - 9:00 PM</p>
+          <p><strong>Sunday:</strong> 8:00 AM - 7:00 PM</p>
+        </div>
+        
+        <div class="footer-column">
+          <div class="logo">
+            <h1>Coffee<span>aroma</span></h1>
+          </div>
+          <a href="#" class="btn primary">Order Online</a>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>© 2025 Coffee Aroma. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html> 

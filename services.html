@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Coffee Aroma</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    .services-hero {
+      background: url('images/services-hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 120px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .services-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      background: linear-gradient(to bottom, transparent, #FFFDD0);
+    }
+
+    .services-content {
+      padding: 80px 0;
+      background-color: #FFFDD0;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+      color: var(--accent-color, #5D4037);
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--accent-color, #5D4037);
+      margin-bottom: 15px;
+    }
+
+    .service-card p {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .service-features {
+      background: white;
+      padding: 60px;
+      border-radius: 15px;
+      margin-bottom: 60px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .service-features h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--accent-color, #5D4037);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .features-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .feature-icon {
+      color: var(--accent-color, #5D4037);
+      font-size: 1.2rem;
+    }
+
+    .feature-text h4 {
+      font-weight: 500;
+      color: var(--accent-color, #5D4037);
+      margin-bottom: 5px;
+    }
+
+    .feature-text p {
+      color: #666;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .cta-section {
+      text-align: center;
+      padding: 60px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .cta-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--accent-color, #5D4037);
+      margin-bottom: 20px;
+    }
+
+    .cta-section p {
+      color: #666;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 768px) {
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .features-list {
+        grid-template-columns: 1fr;
+      }
+
+      .service-features {
+        padding: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="container">
+      <p class="tagline">☕ TASTE OUR RICH COFFEE EXPERIENCE IN EVERY SIP</p>
+      <div class="color-selector">
+        <span>Choose accent:</span>
+        <div class="color-dot active" data-color="#5D4037"></div>
+        <div class="color-dot" data-color="#8D6E63"></div>
+        <div class="color-dot" data-color="#A1887F"></div>
+        <div class="color-dot" data-color="#D7CCC8"></div>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>Coffee<span>aroma</span></h1>
+      </div>
+      <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="story.html">Story</a></li>
+            <li><a href="mission.html">Mission</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="owner.html" >Owner</a></li>
+         
+        </ul>
+      </nav>
+      <a href="order.html" class="btn primary">Cart</a>
+      <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <section class="services-hero">
+    <div class="container">
+      <h2 class="section-title fade-in">Our Services</h2>
+      <p class="subtitle fade-in delay-1">Discover how we can enhance your coffee experience</p>
+    </div>
+  </section>
+
+  <section class="services-content">
+    <div class="container">
+      <div class="service-grid fade-in">
+        <div class="service-card">
+          <div class="service-icon">☕</div>
+          <h3>Coffee Catering</h3>
+          <p>Professional coffee service for your events, meetings, and special occasions. We bring the coffee shop experience to you.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🎓</div>
+          <h3>Coffee Workshops</h3>
+          <p>Learn the art of coffee brewing, latte art, and coffee tasting in our interactive workshops led by expert baristas.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🏢</div>
+          <h3>Office Solutions</h3>
+          <p>Custom coffee programs for your workplace, including equipment, supplies, and regular maintenance services.</p>
+        </div>
+      </div>
+
+      <div class="service-features fade-in">
+        <h2>What We Offer</h2>
+        <div class="features-list">
+          <div class="feature-item">
+            <div class="feature-icon">✓</div>
+            <div class="feature-text">
+              <h4>Custom Menu Planning</h4>
+              <p>Tailored coffee and food selections for your specific event or business needs.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">✓</div>
+            <div class="feature-text">
+              <h4>Professional Equipment</h4>
+              <p>High-quality coffee machines and accessories for optimal brewing.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">✓</div>
+            <div class="feature-text">
+              <h4>Expert Baristas</h4>
+              <p>Skilled staff to ensure perfect coffee preparation and service.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">✓</div>
+            <div class="feature-text">
+              <h4>Flexible Scheduling</h4>
+              <p>Available for one-time events or regular service arrangements.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-section fade-in">
+        <h2>Ready to Get Started?</h2>
+        <p>Contact us to discuss your coffee service needs and get a customized quote for your event or business.</p>
+        <a href="#" class="btn primary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#" class="social-icon twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+            </a>
+            <a href="#" class="social-icon instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="social-icon pinterest">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.2l3-2.8a4.6 4.6 0 0 0 6-2.9"></path></svg>
+            </a>
+          </div>
+          <p>Brooklyn, New York</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Daily Menu</h3>
+          <ul>
+            <li><a href="#">Our Coffees</a></li>
+            <li><a href="#">Pastries & Snacks</a></li>
+            <li><a href="#">Seasonal Specialties</a></li>
+            <li><a href="#">Gift Cards</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Business Hours</h3>
+          <p><strong>Mon-Fri:</strong> 6:00 AM - 8:00 PM</p>
+          <p><strong>Saturday:</strong> 7:00 AM - 9:00 PM</p>
+          <p><strong>Sunday:</strong> 8:00 AM - 7:00 PM</p>
+        </div>
+        
+        <div class="footer-column">
+          <div class="logo">
+            <h1>Coffee<span>aroma</span></h1>
+          </div>
+          <a href="#" class="btn primary">Order Online</a>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>© 2025 Coffee Aroma. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Reviews - Coffee Aroma</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    .reviews-hero {
+      background: url('images/reviews-hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 120px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .reviews-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      background: linear-gradient(to bottom, transparent, #FFFDD0);
+    }
+
+    .reviews-content {
+      padding: 80px 0;
+      background-color: #FFFDD0;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .review-card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .review-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .reviewer-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--accent-color, #5D4037);
+    }
+
+    .review-date {
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .review-rating {
+      color: #FFD700;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+
+    .review-text {
+      color: #666;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    .review-stats {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .stat-card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--accent-color, #5D4037);
+      margin-bottom: 10px;
+    }
+
+    .stat-label {
+      color: #666;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="container">
+      <p class="tagline">☕ TASTE OUR RICH COFFEE EXPERIENCE IN EVERY SIP</p>
+      <div class="color-selector">
+        <span>Choose accent:</span>
+        <div class="color-dot active" data-color="#5D4037"></div>
+        <div class="color-dot" data-color="#8D6E63"></div>
+        <div class="color-dot" data-color="#A1887F"></div>
+        <div class="color-dot" data-color="#D7CCC8"></div>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>Coffee<span>aroma</span></h1>
+      </div>
+      <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="story.html">Story</a></li>
+            <li><a href="mission.html">Mission</a></li>
+            <li><a href="reviews.html" class="active">Reviews</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="owner.html" >Owner</a></li>
+        </ul>
+      </nav>
+      <a href="order.html" class="btn primary">Cart</a>
+      <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <section class="reviews-hero">
+    <div class="container">
+      <h2 class="section-title fade-in">Customer Reviews</h2>
+      <p class="subtitle fade-in delay-1">What our valued customers say about us</p>
+    </div>
+  </section>
+
+  <section class="reviews-content">
+    <div class="container">
+      <div class="review-stats fade-in">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">4.8</div>
+            <div class="stat-label">Average Rating</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">1,234</div>
+            <div class="stat-label">Total Reviews</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">Would Recommend</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">5,000+</div>
+            <div class="stat-label">Happy Customers</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card fade-in">
+          <div class="review-header">
+            <div class="reviewer-name">Maria Santos</div>
+            <div class="review-date">March 15, 2024</div>
+          </div>
+          <div class="review-rating">★★★★★</div>
+          <p class="review-text">Ang ganda ng ambiance at napakasarap ng kape! Perfect place para mag-aral o mag-meeting. Will definitely come back!</p>
+        </div>
+
+        <div class="review-card fade-in">
+          <div class="review-header">
+            <div class="reviewer-name">Juan Dela Cruz</div>
+            <div class="review-date">March 12, 2024</div>
+          </div>
+          <div class="review-rating">★★★★★</div>
+          <p class="review-text">The best coffee shop in town! Their baristas are very friendly and the pastries are delicious. Highly recommended!</p>
+        </div>
+
+        <div class="review-card fade-in">
+          <div class="review-header">
+            <div class="reviewer-name">Isabella Reyes</div>
+            <div class="review-date">March 10, 2024</div>
+          </div>
+          <div class="review-rating">★★★★★</div>
+          <p class="review-text">Love their cold brew! Perfect for hot days. The staff is very accommodating and the place is always clean.</p>
+        </div>
+
+        <div class="review-card fade-in">
+          <div class="review-header">
+            <div class="reviewer-name">Miguel Tan</div>
+            <div class="review-date">March 8, 2024</div>
+          </div>
+          <div class="review-rating">★★★★★</div>
+          <p class="review-text">Their cappuccino is amazing! Great place to work or catch up with friends. The WiFi is fast too!</p>
+        </div>
+
+        <div class="review-card fade-in">
+          <div class="review-header">
+            <div class="reviewer-name">Sofia Mendoza</div>
+            <div class="review-date">March 5, 2024</div>
+          </div>
+          <div class="review-rating">★★★★★</div>
+          <p class="review-text">The best mocha I've ever tasted! The chocolate blend is perfect. Will definitely order again!</p>
+        </div>
+
+        <div class="review-card fade-in">
+          <div class="review-header">
+            <div class="reviewer-name">Gabriel Lim</div>
+            <div class="review-date">March 3, 2024</div>
+          </div>
+          <div class="review-rating">★★★★★</div>
+          <p class="review-text">Their pastries are so good! Perfect with their coffee. The place has a nice, relaxing atmosphere.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#" class="social-icon twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+            </a>
+            <a href="#" class="social-icon instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="social-icon pinterest">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.2l3-2.8a4.6 4.6 0 0 0 6-2.9"></path></svg>
+            </a>
+          </div>
+          <p>Brooklyn, New York</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Daily Menu</h3>
+          <ul>
+            <li><a href="#">Our Coffees</a></li>
+            <li><a href="#">Pastries & Snacks</a></li>
+            <li><a href="#">Seasonal Specialties</a></li>
+            <li><a href="#">Gift Cards</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Business Hours</h3>
+          <p><strong>Mon-Fri:</strong> 6:00 AM - 8:00 PM</p>
+          <p><strong>Saturday:</strong> 7:00 AM - 9:00 PM</p>
+          <p><strong>Sunday:</strong> 8:00 AM - 7:00 PM</p>
+        </div>
+        
+        <div class="footer-column">
+          <div class="logo">
+            <h1>Coffee<span>aroma</span></h1>
+          </div>
+          <a href="#" class="btn primary">Order Online</a>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>© 2025 Coffee Aroma. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html> 
